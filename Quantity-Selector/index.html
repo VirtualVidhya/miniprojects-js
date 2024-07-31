@@ -8,25 +8,32 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="shopping-item">
+    <div class="item-container">
       <img src="mouse.jpg" alt="shopping-item">
 
       <div class="price">
         <p class="tag">MRP: </p>
-        <p class="mrp">100</p>
+        <p id="mrp">100</p>
       </div>
     </div>
-    <div class="qty-container">
-      <h1>Quantity</h1>
-      
-      <div class="counters">
-        <button class="btn dec">-</button>
-        <p class="count">0</p>
-        <button class="btn inc">+</button>
-      </div>
 
-      <p></p>
+    <div class="qty-container">
+      <div class="qty-selector">
+        <h1>Quantity</h1>
+        
+        <div class="counters">
+          <button class="btn dec">-</button>
+          <p class="count">0</p>
+          <button class="btn inc">+</button>
+        </div>
+      </div>
+  
+      <div class="bill">
+        <p class="tag">Total Bill: </p>
+        <p id="bill-amt">0</p>
+      </div>
     </div>
+
 
     <script src="app.js"></script>
   </body>
