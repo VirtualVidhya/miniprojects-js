@@ -1,9 +1,11 @@
-const leftBtn = document.querySelector(".btn-left");
-const rightBtn = document.querySelector(".btn-right");
+const leftBtn = document.querySelector("#left-btn");
+const rightBtn = document.querySelector("#right-btn");
 const buttons = document.querySelector(".btn");
-const imageEl = document.querySelector(".images");
+const image = document.querySelector(".images");
 
-let pictures = ["1", "2", "3", "4", "5", "6"];
+let imgSrc = [
+              "imgs/1.png", "imgs/2.png", "imgs/3.png", 
+              "imgs/4.png", "imgs/5.png", "imgs/6.png"];
 
 let count = 0;
 
@@ -12,17 +14,32 @@ rightBtn.addEventListener("click", right);
 
 function right() {
   count++;
-  if (count > pictures.length - 1) {
+
+  if (count > imgSrc.length - 1) {
     count = 0;
   }
-  
-  imageEl.style.background = `url("imgs/${pictures[count]}.png")`;
+
+  setImg();
 }
+
 function left() {
   count--;
+
   if (count < 0) {
-    count = pictures.length - 1;
+    count = imgSrc.length - 1;
   }
 
-  imageEl.style.background = `url("imgs/${pictures[count]}.png")`;
+  setImg();
 }
+
+function setImg() {
+  image.style.background = `url("${imgSrc[count]}")`;
+}
+
+function setRandomInitImg() {
+  count = Math.floor( Math.random() * imgSrc.length );
+
+  setImg();
+}
+
+setRandomInitImg();
