@@ -1,55 +1,42 @@
-const emojisEL = document.querySelector(".emojis");
+const emojisEL = document.querySelector("img");
 
 const starsEl = document.querySelectorAll(".fa-solid");
 
-const ratingNamesEl = document.querySelector(".names");
+const ratingNamesEl = document.querySelector("h3");
 
-starsEl[0].addEventListener("click", () => {
-  starsEl[0].style.color = "gold";
-  starsEl[1].style.color = "black";
-  starsEl[2].style.color = "black";
-  starsEl[3].style.color = "black";
-  starsEl[4].style.color = "black";
-  emojisEL.style.transform = "translateX(180px)";
-  ratingNamesEl.style.transform = "translateY(80px)";
-});
+for (let i = 0; i < starsEl.length; i++) {
+  starsEl[i].addEventListener("click", () => {
+    SetStars(i + 1);
+    SetEmoji(i);
+    SetReview(i);
+  });
+}
 
-starsEl[1].addEventListener("click", () => {
-  starsEl[0].style.color = "gold";
-  starsEl[1].style.color = "gold";
-  starsEl[2].style.color = "black";
-  starsEl[3].style.color = "black";
-  starsEl[4].style.color = "black";
-  emojisEL.style.transform = "translateX(90px)";
-  ratingNamesEl.style.transform = "translateY(40px)";
-});
+const totalStarCount = 5;
 
-starsEl[2].addEventListener("click", () => {
-  starsEl[0].style.color = "gold";
-  starsEl[1].style.color = "gold";
-  starsEl[2].style.color = "gold";
-  starsEl[3].style.color = "black";
-  starsEl[4].style.color = "black";
-  emojisEL.style.transform = "translateX(0px)";
-  ratingNamesEl.style.transform = "translateY(0px)";
-});
+function SetStars(n) {
+  for (let i = 0; i < n; i++) {
+    starsEl[i].style.color = "gold";
+  }
 
-starsEl[3].addEventListener("click", () => {
-  starsEl[0].style.color = "gold";
-  starsEl[1].style.color = "gold";
-  starsEl[2].style.color = "gold";
-  starsEl[3].style.color = "gold";
-  starsEl[4].style.color = "black";
-  emojisEL.style.transform = "translateX(-90px)";
-  ratingNamesEl.style.transform = "translateY(-40px)";
-});
+  for (let i = n; i < totalStarCount; i++) {
+    starsEl[i].style.color = "black";
+  }
+}
 
-starsEl[4].addEventListener("click", () => {
-  starsEl[0].style.color = "gold";
-  starsEl[1].style.color = "gold";
-  starsEl[2].style.color = "gold";
-  starsEl[3].style.color = "gold";
-  starsEl[4].style.color = "gold";
-  emojisEL.style.transform = "translateX(-180px)";
-  ratingNamesEl.style.transform = "translateY(-80px)";
-});
+const emojiSrc = [
+  "images/very_poor.webp",
+  "images/poor.webp",
+  "images/average.webp",
+  "images/good.webp",
+  "images/excellent.webp",
+];
+const reviewTexts = ["Very Poor", "Poor", "Average", "Good", "Excellent"];
+
+function SetEmoji(n) {
+  emojisEL.setAttribute("src", emojiSrc[n]);
+}
+
+function SetReview(n) {
+  ratingNamesEl.innerText = reviewTexts[n];
+}
