@@ -24,19 +24,33 @@ function SetStars(n) {
   }
 }
 
-const emojiSrc = [
-  "images/very_poor.png",
-  "images/poor.png",
-  "images/average.png",
-  "images/good.png",
-  "images/excellent.png",
+const reviews = [
+  {
+    text: "Very Poor",
+    img: "images/very_poor.png",
+  },
+  {
+    text: "Poor",
+    img: "images/poor.png",
+  },
+  {
+    text: "Average",
+    img: "images/average.png",
+  },
+  {
+    text: "Good",
+    img: "images/good.png",
+  },
+  {
+    text: "Excellent",
+    img: "images/excellent.png",
+  },
 ];
-const reviewTexts = ["Very Poor", "Poor", "Average", "Good", "Excellent"];
 
 function SetEmoji(n) {
-  emojisEL.setAttribute("src", emojiSrc[n]);
+  emojisEL.setAttribute("src", reviews[n].img);
 }
 
 function SetReview(n) {
-  ratingNamesEl.innerText = reviewTexts[n];
+  ratingNamesEl.innerText = reviews[n].text;
 }
