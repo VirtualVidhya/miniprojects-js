@@ -25,11 +25,11 @@ function SetStars(n) {
 }
 
 const emojiSrc = [
-  "images/very_poor.webp",
-  "images/poor.webp",
-  "images/average.webp",
-  "images/good.webp",
-  "images/excellent.webp",
+  "images/very_poor.png",
+  "images/poor.png",
+  "images/average.png",
+  "images/good.png",
+  "images/excellent.png",
 ];
 const reviewTexts = ["Very Poor", "Poor", "Average", "Good", "Excellent"];
 
