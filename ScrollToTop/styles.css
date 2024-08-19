@@ -1,0 +1,23 @@
+div {
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-hidden {
+    display: none;
+}
+
+.btn-visible {
+    display: block;
+}
