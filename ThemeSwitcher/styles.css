@@ -18,7 +18,7 @@ body {
     text-align: right;
 }
 
-button {
+.theme-btn {
   font-size: 25px;
   /* font-weight: bold; */
   padding: 0.5rem 1rem;
@@ -31,13 +31,22 @@ button {
   border: none;
 }
 
-button img {
+/* .btn-visible {
+  display: inline;
+} */
+
+/* button img {
   height: 20px;
   width: 20px;
+  color: red;
+} */
+
+.btn-icon-hidden {
+  display: none;
 }
 
 #img-container {
-    text-align: center;
+  text-align: center;
 }
 
 table, th, td {
