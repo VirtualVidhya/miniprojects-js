@@ -1,0 +1,55 @@
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  min-height: 100vh;
+}
+
+#theme-btn-container {
+    text-align: right;
+}
+
+button {
+  font-size: 25px;
+  /* font-weight: bold; */
+  padding: 0.5rem 1rem;
+  transition: all var(--global-transition-time) ease-in-out;
+  cursor: pointer;
+  color: var(--color-fg);
+  /* background-color: var(--color-bg); */
+  /* border: 0.25rem solid var(--color-fg); */
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+button img {
+  height: 20px;
+  width: 20px;
+}
+
+#img-container {
+    text-align: center;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+  width: 50%;
+  margin: 0px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 5px;
+}
