@@ -1,0 +1,53 @@
+body {
+    margin: 25px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 25px;
+    padding: 5px 15px;
+}
+
+p {
+    font-size: 25px;
+}
+
+select {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.input-default {
+    border: 1px solid black;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+.error-msg {
+    color: red;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+.element-hidden {
+    display: none;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events 2 - Q3 | Ex. Solutions</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Student Enrollment Form</h1>
+
+    <div>
+
+    </div>
+
+    <form action="">
+        <label>Student Name:</label>
+        <input type="text" placeholder="Lorem Ipsum" name="name" class="input-default">
+        <label class="error-msg element-hidden">Enter proper name</label>
+        <br>
+
+        <label>Student Age:</label>
+        <input type="number" placeholder="18" name="age" class="input-default">
+        <label class="error-msg element-hidden">Enter proper age</label>
+        <br>
+
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="9999999999" name="phone" class="input-default">
+        <label class="error-msg element-hidden">Enter proper phone number</label>
+        <br>
+
+        <label>Email:</label>
+        <input type="text" placeholder="username@email.com" name="email" class="input-default">
+        <label class="error-msg element-hidden">Enter proper email</label>
+        
+        <br>
+
+        <h2>Required Skills:</h2>
+        <label>
+            <input type="checkbox" name="computer">
+            Can operate computer comfortably
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="internet">
+            Familiar with internet usage
+        </label>
+
+        <br>
+
+        <h2>Do you have your own laptop?</h2>
+        <label>
+            <input type="radio" name="occupation" value="yes-laptop">
+            Yes
+        </label>
+        <label>
+            <input type="radio" name="occupation" value="no-laptop" checked="checked">
+            No
+        </label>
+
+        <br>
+
+        <h2>Select preferred Batch Timings:</h2>
+        <select>
+            <option value="4-5">4 to 5 pm</option>
+            <option value="5-6">5 to 6 pm</option>
+            <option value="6-7">6 to 7 pm</option>
+        </select>
+
+        <br>
+
+        <h2>Message:</h2>
+        <textarea cols="100" rows="5" placeholder="Any further message for inquiry"></textarea>
+
+        <br><br><br><br><br>
+
+        <button type="submit">Check Eligibility</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
