@@ -50,6 +50,7 @@ function ValidateEntries() {
 function CheckEnrollmentEligibility() {
     let compCheckbox = document.querySelector('input[name="computer"]');
     let internetCheckbox = document.querySelector('input[name="internet"]');
+    let textArea = document.querySelector('textarea');
 
     if (age.value > 15 && compCheckbox.checked && internetCheckbox.checked) {
         courseStatus.innerHTML = `<b>Congratulations ${fname.value}! You are eligible for the course enrollment.</b>`;
@@ -67,6 +68,10 @@ function CheckEnrollmentEligibility() {
         let selectBatch = document.querySelector('select');
 
         reason.innerHTML += `<br>Your batch timings will be ${selectBatch.value} pm.`;
+
+        if (textArea.value.trim() != "") {
+            reason.innerHTML += `<br><br>We have got your message. Our team will get back to you soon.`;
+        }
     }
     else {
         courseStatus.innerHTML = `<b>Sorry ${fname.value}! You are not eligible for the course enrollment.</b>`;
