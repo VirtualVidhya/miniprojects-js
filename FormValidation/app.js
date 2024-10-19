@@ -177,7 +177,7 @@ function ValidatePhoneNo(element) {
 }
 
 function ValidateEmail(element) {
-    var reg = new RegExp("^[a-zA-Z0-9_.]+@[a-zA-Z0-9.]+$");
+    var reg = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
     
     if (!reg.test(element.value)) {
         return "Please enter a valid email address!";
